@@ -1,0 +1,26 @@
+{
+  "name": "typeexpress",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx --watch src/app.ts",
+    "build": "npm run lint && echo '> Compiling Typescript...' && tsc && tsc-alias && cpy \"src/**/*\" \"!src/**/*.ts\" dist/ --parents",
+    "start": "node dist/app.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "cpy-cli": "^6.0.0",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
+  }
+}
